@@ -1,0 +1,20 @@
+name: Build
+
+# Builds every example whose easyforge libraries exist, against easyforge's main
+# branch. Runs on every push and once a day, so a change in easyforge that
+# breaks an example is noticed.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 6 * * *"
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S . -B build
+      - name: Build
+        run: cmake --build build --config Release --parallel
