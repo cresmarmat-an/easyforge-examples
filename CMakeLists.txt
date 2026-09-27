@@ -40,6 +40,12 @@ function(add_example folder)
     add_executable(${folder} ${sources})
     target_link_libraries(${folder} PRIVATE ${targets})
 
+    # An icon.png next to main.cpp also becomes the program's own icon, the one
+    # Explorer and the taskbar show.
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${folder}/icon.png")
+        easyforge_app_icon(${folder} "${folder}/icon.png")
+    endif()
+
     # Files next to main.cpp, such as images and sounds, are copied beside the program.
     file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/${folder}/*")
     list(FILTER files EXCLUDE REGEX "\\.(cpp|h)$")
