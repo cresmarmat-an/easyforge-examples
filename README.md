@@ -23,9 +23,9 @@ cmake -S . -B build -D FETCHCONTENT_SOURCE_DIR_EASYFORGE=../easyforge
 
 ## The examples
 
-easyforge is at 0.0.1-alpha, and its libraries arrive one at a time. An example
-whose libraries are not available yet is skipped when you configure, with a
-message saying which library it is waiting for.
+Every example builds with easyforge 0.0.1 on Windows. An example whose
+libraries a copy of easyforge does not have is skipped when you configure, with
+a message saying which library it is waiting for.
 
 | Example | Shows | Needs |
 |---|---|---|
