@@ -45,5 +45,6 @@ a message saying which library it is waiting for.
 ## License
 
 The examples are released under the [MIT License](LICENSE). Copyright (c) 2026
-Cresmar Mat-an. Copy them into your own projects freely. The images and sounds
-were made for these examples and are under the same license.
+Cresmar Mat-an. Copy them into your own projects freely. The sounds and other
+images were made for these examples and are under the same license. Each
+example's icon is the easyforge logo.
