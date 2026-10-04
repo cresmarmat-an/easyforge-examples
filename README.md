@@ -40,9 +40,7 @@ message saying which library it is waiting for.
 | [09-chat](09-chat) | A chat between three clients and a server, with typing hints sent unreliably and a switch for a poor network | window, ui, network |
 | [10-lobby](10-lobby) | Signing in, listing, creating, and joining rooms by requests that are answered, refused with a reason, or time out | window, ui, network |
 | [11-shared-table](11-shared-table) | A data table shared two ways between a server and two clients, each moving its own marker and picking up the server's coins | window, ui, data, network |
-| 12-small-multiplayer-game | Every library together | all |
-
-Examples without a link are not written yet.
+| [12-small-multiplayer-game](12-small-multiplayer-game) | Coin Rush: a multiplayer arena game with bots, a host that runs the physics and reads its rules from a script, and players that share its table, using every library | every library |
 
 ## License
 

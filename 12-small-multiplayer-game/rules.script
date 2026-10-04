@@ -1,0 +1,34 @@
+-- The rules of Coin Rush. The host reads this file when it starts a game, so
+-- the rules change without building the program again.
+
+-- Seconds in a round, and seconds the scores stay up between rounds.
+constant RoundSeconds = 45
+constant BreakSeconds = 4
+
+-- Coins lying in the arena at once.
+constant CoinsAtOnce = 6
+
+-- How hard a player pushes, in newtons, and the shove of a dash.
+constant Push = 22
+constant DashShove = 7
+constant DashSeconds = 1.2
+
+-- What a new coin is worth, from a random number between 0 and 1: now and then
+-- a gold one.
+function CoinValue(roll: number) returns number then
+    if roll < 0.15 then
+        return 5
+    end
+    return 1
+end
+
+-- The name shown for the winner of a round, or for a tie.
+function WinnerText(names: list of string, best: number) returns string then
+    if best == 0 then
+        return "Nobody scored"
+    end
+    if names.Count == 1 then
+        return "{names[1]} wins with {best}"
+    end
+    return "A tie at {best}"
+end

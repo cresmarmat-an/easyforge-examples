@@ -79,3 +79,5 @@ add_example(08-physics LIBRARIES window ui physics)
 add_example(09-chat LIBRARIES window ui network)
 add_example(10-lobby LIBRARIES window ui network)
 add_example(11-shared-table LIBRARIES window ui data network)
+add_example(12-small-multiplayer-game
+    LIBRARIES core assets window input graphics data ui script sound physics network)
