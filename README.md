@@ -37,9 +37,9 @@ message saying which library it is waiting for.
 | [06-scripted-interface](06-scripted-interface) | A menu, settings, and a game screen run by a script | window, ui, script |
 | [07-sound](07-sound) | Streamed music on a bus with filters, and sounds played where you click around a listener | window, ui, sound |
 | [08-physics](08-physics) | A stack of boxes that settles the same way every run, in two worlds that stay identical | window, ui, physics |
-| 09-chat | One-way messages between programs | network |
-| 10-lobby | Two-way requests and replies | network |
-| 11-shared-table | A data table kept in step between machines | data, network |
+| [09-chat](09-chat) | A chat between three clients and a server, with typing hints sent unreliably and a switch for a poor network | window, ui, network |
+| [10-lobby](10-lobby) | Signing in, listing, creating, and joining rooms by requests that are answered, refused with a reason, or time out | window, ui, network |
+| [11-shared-table](11-shared-table) | A data table shared two ways between a server and two clients, each moving its own marker and picking up the server's coins | window, ui, data, network |
 | 12-small-multiplayer-game | Every library together | all |
 
 Examples without a link are not written yet.
