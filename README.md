@@ -30,10 +30,10 @@ message saying which library it is waiting for.
 | Example | Shows | Needs |
 |---|---|---|
 | [01-empty-window](01-empty-window) | An empty window with a title and an icon | window |
-| 02-custom-title-bar | A window that draws its own title bar | window, ui |
-| 03-displays | Switching between screens with transitions | window, ui |
-| 04-effects-and-shaders | Shadows, blur, and a custom shader | window, ui |
-| 05-live-data | Labels that update when data changes | window, ui, data |
+| [02-custom-title-bar](02-custom-title-bar) | A title bar of its own with menus, a list to choose from, tabs, a text area, and a dialog | window, ui |
+| [03-displays](03-displays) | Switching between screens with fades, slides, and scaling, and going back | window, ui |
+| [04-effects-and-shaders](04-effects-and-shaders) | Every built-in effect, and a shader of your own | window, ui |
+| [05-live-data](05-live-data) | Labels that follow a data table, edits that undo, and a 3D scene behind | window, ui, data |
 | 06-scripted-interface | An interface driven by a script | window, ui, script |
 | 07-sound | Music and positional sound | sound |
 | 08-physics | A stack of boxes that settles | physics |

@@ -46,6 +46,12 @@ function(add_example folder)
         easyforge_app_icon(${folder} "${folder}/icon.png")
     endif()
 
+    # Shaders are checked when the example is built, so a mistake stops the build.
+    file(GLOB shaders "${CMAKE_CURRENT_SOURCE_DIR}/${folder}/*.shader")
+    if(shaders)
+        easyforge_add_shaders(${folder} ${shaders})
+    endif()
+
     # Files next to main.cpp, such as images and sounds, are copied beside the program.
     file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/${folder}/*")
     list(FILTER files EXCLUDE REGEX "\\.(cpp|h)$")
@@ -57,3 +63,7 @@ function(add_example folder)
 endfunction()
 
 add_example(01-empty-window LIBRARIES window)
+add_example(02-custom-title-bar LIBRARIES window ui)
+add_example(03-displays LIBRARIES window ui)
+add_example(04-effects-and-shaders LIBRARIES window ui)
+add_example(05-live-data LIBRARIES window ui data)
