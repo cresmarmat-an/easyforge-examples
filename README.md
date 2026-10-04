@@ -35,7 +35,7 @@ message saying which library it is waiting for.
 | [04-effects-and-shaders](04-effects-and-shaders) | Every built-in effect, and a shader of your own | window, ui |
 | [05-live-data](05-live-data) | Labels that follow a data table, edits that undo, and a 3D scene behind | window, ui, data |
 | [06-scripted-interface](06-scripted-interface) | A menu, settings, and a game screen run by a script | window, ui, script |
-| 07-sound | Music and positional sound | sound |
+| [07-sound](07-sound) | Streamed music on a bus with filters, and sounds played where you click around a listener | window, ui, sound |
 | 08-physics | A stack of boxes that settles | physics |
 | 09-chat | One-way messages between programs | network |
 | 10-lobby | Two-way requests and replies | network |
@@ -47,4 +47,5 @@ Examples without a link are not written yet.
 ## License
 
 The examples are released under the [MIT License](LICENSE). Copyright (c) 2026
-Cresmar Mat-an. Copy them into your own projects freely.
+Cresmar Mat-an. Copy them into your own projects freely. The images and sounds
+were made for these examples and are under the same license.
