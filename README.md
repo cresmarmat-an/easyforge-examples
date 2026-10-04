@@ -34,7 +34,7 @@ message saying which library it is waiting for.
 | [03-displays](03-displays) | Switching between screens with fades, slides, and scaling, and going back | window, ui |
 | [04-effects-and-shaders](04-effects-and-shaders) | Every built-in effect, and a shader of your own | window, ui |
 | [05-live-data](05-live-data) | Labels that follow a data table, edits that undo, and a 3D scene behind | window, ui, data |
-| 06-scripted-interface | An interface driven by a script | window, ui, script |
+| [06-scripted-interface](06-scripted-interface) | A menu, settings, and a game screen run by a script | window, ui, script |
 | 07-sound | Music and positional sound | sound |
 | 08-physics | A stack of boxes that settles | physics |
 | 09-chat | One-way messages between programs | network |

@@ -1,0 +1,51 @@
+-- What the interface does. main.cpp lays it out and names its elements; this
+-- script finds them by name and gives them something to do.
+
+constant pages = ui.Find("Pages")
+variable score = 0
+
+ui.Find("Play").OnClick = function() then
+    pages.Show("Game", Slide(0.3))
+end
+
+ui.Find("Settings").OnClick = function() then
+    pages.Show("Settings", Fade(0.25))
+end
+
+ui.Find("Quit").OnClick = Quit
+
+function GoBack() then
+    pages.Back()
+end
+
+ui.Find("SettingsBack").OnClick = GoBack
+ui.Find("GameBack").OnClick = GoBack
+
+ui.Find("Point").OnClick = function() then
+    score += 1
+    ui.Find("Score").Text = "Score: {score}"
+end
+
+constant volumeText = ui.Find("VolumeText")
+
+function ShowVolume(volume: number) then
+    volumeText.Text = "Volume: {Round(volume * 100)}%"
+end
+
+ui.Find("Volume").OnChange = ShowVolume
+ShowVolume(ui.Find("Volume").Value)
+
+ui.Find("FullScreen").OnChange = SetFullScreen
+
+-- The title breathes for as long as the program runs: a function started with
+-- spawn that waits a little between steps.
+function Breathe(title) then
+    variable time = 0
+    while true then
+        time += 0.05
+        title.Opacity = 0.75 + Sine(time * 2) * 0.25
+        wait 0.05
+    end
+end
+
+spawn Breathe(ui.Find("Title"))

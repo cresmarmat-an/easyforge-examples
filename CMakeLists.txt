@@ -52,6 +52,12 @@ function(add_example folder)
         easyforge_add_shaders(${folder} ${shaders})
     endif()
 
+    # Scripts are checked when the example is built too.
+    file(GLOB scripts "${CMAKE_CURRENT_SOURCE_DIR}/${folder}/*.script")
+    if(scripts)
+        easyforge_add_scripts(${folder} ${scripts})
+    endif()
+
     # Files next to main.cpp, such as images and sounds, are copied beside the program.
     file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/${folder}/*")
     list(FILTER files EXCLUDE REGEX "\\.(cpp|h)$")
@@ -67,3 +73,4 @@ add_example(02-custom-title-bar LIBRARIES window ui)
 add_example(03-displays LIBRARIES window ui)
 add_example(04-effects-and-shaders LIBRARIES window ui)
 add_example(05-live-data LIBRARIES window ui data)
+add_example(06-scripted-interface LIBRARIES window ui script)
