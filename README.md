@@ -36,7 +36,7 @@ message saying which library it is waiting for.
 | [05-live-data](05-live-data) | Labels that follow a data table, edits that undo, and a 3D scene behind | window, ui, data |
 | [06-scripted-interface](06-scripted-interface) | A menu, settings, and a game screen run by a script | window, ui, script |
 | [07-sound](07-sound) | Streamed music on a bus with filters, and sounds played where you click around a listener | window, ui, sound |
-| 08-physics | A stack of boxes that settles | physics |
+| [08-physics](08-physics) | A stack of boxes that settles the same way every run, in two worlds that stay identical | window, ui, physics |
 | 09-chat | One-way messages between programs | network |
 | 10-lobby | Two-way requests and replies | network |
 | 11-shared-table | A data table kept in step between machines | data, network |
